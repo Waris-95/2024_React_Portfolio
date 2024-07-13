@@ -6,18 +6,36 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    id: 4,
+    title: "Bonfire",
+    description: "Bonfire is a Full-stack Discord clone. This project allows users to create servers and channels, invite friends, and send messages within these channels. Enjoy seamless communication and community building with Bonfire.",
+    image: "/images/projects/discord.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/charlesoller/bonfire",
+    previewUrl: "https://bonfire-j5fr.onrender.com/",
+  },
+  {
+    id: 5,
+    title: "Regal Sartorial",
+    description: "Regal Sartorial is a Full-stack e-commerce platform designed to elevate the shopping experience. Users can curate wardrobes by grouping clothing items for inspiration, save favorite items, and securely checkout with detailed shipping options and payment methods, ensuring a seamless purchase confirmation process. Additionally, the platform includes a robust review system, enabling users to leave feedback on items. A sophisticated email confirmation feature is integrated, providing users with order confirmations upon successful transactions.",
+    image: "/images/projects/regal.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Waris-95/regal-sartorial",
+    previewUrl: "https://regal-sartorial.onrender.com",
+  },
+  {
     id: 1,
     title: "Czybnb",
-    description: "CzyBnB is a full-stack web application inspired by Airbnb. It allows users to create spots, add reviews, offering a diverse range of accommodations for exploration.",
-    image: "/images/projects/bnb.gif",
+    description: "CzyBnB is a Full-stack web application inspired by Airbnb. It allows users to create spots, add reviews, offering a diverse range of accommodations for exploration.",
+    image: "/images/projects/czybnb.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/Czybnb",
-    previewUrl: "https://auth-me-3ebb.onrender.com/"
+    previewUrl: "https://czybnb.onrender.com"
   },
   {
     id: 2,
     title: "Bose Website Redesign",
-    description: "Enthralled by the immersive experience of my Bose 700 headphones, I felt inspired to channel my creativity into crafting a sophisticated website, drawing inspiration directly from the sleek design and premium feel of Bose.",
+    description: "A front-end only responsive web design inspired from my pair of bose headphones",
     image: "/images/projects/bose.gif",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/Bose-700-Headphones",
@@ -31,24 +49,6 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/Personal-Portfolio-React",
     previewUrl: "https://aw-abduls-portfolio.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Coming Soon...",
-    description: "",
-    image: "",
-    tag: ["", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "Coming Soon...",
-    description: "",
-    image: "",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
   },
   {
     id: 6,

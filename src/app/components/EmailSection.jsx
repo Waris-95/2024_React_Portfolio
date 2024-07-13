@@ -18,24 +18,27 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
+      // console.log("Server response:", resData);
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.status === 200) {
+        // console.log("Message sent.");
+        setEmailSubmitted(true);
+      } else {
+        console.error("Failed to send message:", resData);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
     }
   };
 
@@ -50,16 +53,21 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/Waris-95?tab=overview&from=2024-04-01&to=2024-04-24" target="_blank">
+          <Link
+            href="https://github.com/Waris-95?tab=overview&from=2024-04-01&to=2024-04-24"
+            target="_blank"
+          >
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/abdul-waris-aa1234aw/" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/abdul-waris-aa1234aw/"
+            target="_blank"
+          >
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>

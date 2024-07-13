@@ -1,16 +1,19 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+// Use the verified Resend email for testing
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
+const toEmail = process.env.TO_EMAIL;
 
-export async function POST(req, res) {
-  const { email, subject, message } = await req.json();
-  console.log(email, subject, message);
+export async function POST(req) {
   try {
+    const { email, subject, message } = await req.json();
+    // console.log('Received request:', { email, subject, message });
+
     const data = await resend.emails.send({
       from: fromEmail,
-      to: [fromEmail, email],
+      to: [toEmail], // Send to your email
       subject: subject,
       react: (
         <>
@@ -21,8 +24,11 @@ export async function POST(req, res) {
         </>
       ),
     });
+
+    // console.log('Email sent successfully:', data);
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error });
+    console.error('Error sending email:', error.response?.data || error.message);
+    return NextResponse.json({ error: error.message });
   }
 }
