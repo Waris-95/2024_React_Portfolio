@@ -31,7 +31,14 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-           <Image src="https://freepngdesign.com/content/uploads/images/p-615-4-aw-logo-png-transparent-logo-816016657573.png" alt="AW Logo" className="h-12 md:h-20" style={{ filter: "invert(55%)" }} />
+            <Image
+            src="/images/logo.png"
+            alt="AW Logo"
+            width={100} // specify the width here
+            height={65} // specify the height here
+            className="h-12 md:h-20"
+            style={{ filter: "invert(55%)" }}
+          />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
