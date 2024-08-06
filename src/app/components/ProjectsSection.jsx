@@ -6,27 +6,36 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: 4,
-    title: "Bonfire",
-    description: "Bonfire is a Full-stack Discord clone. This project allows users to create servers and channels, invite friends, and send messages within these channels. Enjoy seamless communication and community building with Bonfire.",
-    image: "/images/projects/discord.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/charlesoller/bonfire",
-    previewUrl: "https://bonfire-j5fr.onrender.com/",
-  },
-  {
     id: 5,
     title: "Regal Sartorial",
-    description: "Regal Sartorial is a Full-stack e-commerce platform designed to elevate the shopping experience. Users can curate wardrobes by grouping clothing items for inspiration, save favorite items, and securely checkout with detailed shipping options and payment methods, ensuring a seamless purchase confirmation process. Additionally, the platform includes a robust review system, enabling users to leave feedback on items. A sophisticated email confirmation feature is integrated, providing users with order confirmations upon successful transactions.",
-    image: "/images/projects/regal.png",
+    description: "Regal Sartorial is a Full-Stack e-commerce platform designed to elevate the shopping experience. Users can curate wardrobes by grouping clothing items for inspiration, save favorite items, and securely checkout with detailed shipping options and payment methods, ensuring a seamless purchase confirmation process. Additionally, the platform includes a robust review system, enabling users to leave feedback on items. A sophisticated email confirmation feature is integrated, providing users with order confirmations upon successful transactions.",
+    image: "/images/projects/regal.gif",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/regal-sartorial",
     previewUrl: "https://regal-sartorial.onrender.com",
   },
   {
+    id: 4,
+    title: "Bonfire",
+    description: "Bonfire is a Full-Stack Discord clone. This project allows users to create servers and channels, invite friends, and send messages within these channels. Enjoy seamless communication and community building with Bonfire.",
+    image: "/images/projects/bonfire.gif",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/charlesoller/bonfire",
+    previewUrl: "https://bonfire-j5fr.onrender.com/",
+  },
+  {
+    id: 6,
+    title: "Vibr",
+    description: "Vibr is Full-Stack web application. Where a user can connect & touch base with family/friends with notifications included",
+    image: "images/projects/vibr.gif",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Waris-95/VibR",
+    previewUrl: "https://vibr.onrender.com/",
+  },
+  {
     id: 1,
-    title: "Czybnb",
-    description: "CzyBnB is a Full-stack web application inspired by Airbnb. It allows users to create spots, add reviews, offering a diverse range of accommodations for exploration.",
+    title: "CzyBnb",
+    description: "CzyBnB is a Full-Stack web application inspired by Airbnb. It allows users to create spots, add reviews, offering a diverse range of accommodations for exploration.",
     image: "/images/projects/czybnb.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/Czybnb",
@@ -49,15 +58,6 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/Personal-Portfolio-React",
     previewUrl: "https://aw-abduls-portfolio.vercel.app/",
-  },
-  {
-    id: 6,
-    title: "Coming Soon...",
-    description: "",
-    image: "",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
   },
 ];
 
@@ -117,6 +117,8 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              // Apply resizing style to the Vibr project GIF
+              imgStyle={project.id === 6 ? { transform: 'scale(1)' } : {}}
             />
           </motion.li>
         ))}
