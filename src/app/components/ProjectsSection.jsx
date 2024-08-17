@@ -33,6 +33,15 @@ const projectsData = [
     previewUrl: "https://vibr.onrender.com/",
   },
   {
+    id: 7,
+    title: "Tooli",
+    description: "Tooli is a Full-Stack e-commerce site. It allows user to buy and sell items online. Built to aid my learning of Python & Flask.py routing",
+    image: "/images/projects/Tooli.gif",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Waris-95/E-com",
+    previewUrl: "https://tooli.onrender.com"
+  },
+  {
     id: 1,
     title: "CzyBnb",
     description: "CzyBnB is a Full-Stack web application inspired by Airbnb. It allows users to create spots, add reviews, offering a diverse range of accommodations for exploration.",
