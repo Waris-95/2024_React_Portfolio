@@ -72,6 +72,7 @@ const HeroSection = () => {
               width={280}
               height={280}
               style={{ maxWidth: "71%", height: "auto" }}
+              priority
             />
           </div>
         </motion.div>
