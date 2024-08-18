@@ -27,7 +27,7 @@ const projectsData = [
     id: 6,
     title: "Vibr",
     description: "Vibr is Full-Stack web application. Where a user can connect & touch base with family/friends with notifications included",
-    image: "images/projects/vibr.gif", 
+    image: "images/projects/Vibr.gif", 
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/VibR",
     previewUrl: "https://vibr.onrender.com/",
