@@ -63,7 +63,7 @@ const projectsData = [
     id: 3,
     title: "2022-2023 Portfolio Site",
     description: "In the midst of 2022, I crafted a portfolio site utilizing the dynamic capabilities of React.js and Next.js, elegantly styled with SCSS. This project marked my dedicated focus on front-end development at the time.",
-    image: "/images/projects/2k23portfolio.gif",
+    image: "/images/projects/old_folio.gif",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Waris-95/Personal-Portfolio-React",
     previewUrl: "https://aw-abduls-portfolio.vercel.app/",
