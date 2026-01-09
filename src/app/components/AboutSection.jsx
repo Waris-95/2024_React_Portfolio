@@ -29,7 +29,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>App Academy Fullstack Program (2024)</li>
-        <li>Potomac Senior High School (2023)</li>
+        <li>Northern Virginia Community College (2023)</li>
       </ul>
     ),
   },
